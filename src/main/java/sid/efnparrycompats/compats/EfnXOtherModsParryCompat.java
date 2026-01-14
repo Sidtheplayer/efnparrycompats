@@ -60,6 +60,8 @@ public class EfnXOtherModsParryCompat implements ICompatModule{
                             List.of(EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT1, EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT2, CorruptAnimations.PARRY_BREAK3))
                     .addAdvancedGuardMotion(CorruptWeaponCategories.S_SPEAR,((capabilityItem, pp) ->
                             List.of(Animations.SWORD_GUARD_ACTIVE_HIT1,Animations.SWORD_GUARD_ACTIVE_HIT2,CorruptAnimations.PARRY_BREAK1)))
+                    .addAdvancedGuardMotion(CorruptWeaponCategories.S_SWORD,((capabilityItem, pp) ->
+                            List.of(EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT1, EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT2,EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT3)))
                     .addAdvancedGuardMotion(CorruptWeaponCategories.S_TACHI,((capabilityItem, pp) ->
                             List.of(EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT1, EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT2,EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT3)))
                     .addAdvancedGuardMotion(CorruptWeaponCategories.GREAT_TACHI,((capabilityItem, pp) ->
