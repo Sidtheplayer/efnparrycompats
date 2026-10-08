@@ -43,12 +43,13 @@ public class EfnXOtherModsParryCompat implements ICompatModule{
                     .addGuardMotion(CorruptWeaponCategories.S_GREATSWORD, (item, player) -> item.getStyle(player) == CapabilityItem.Styles.TWO_HAND ? Animations.GREATSWORD_GUARD_HIT : Animations.SWORD_DUAL_GUARD_HIT)
                     .addGuardMotion(CorruptWeaponCategories.S_LONGSWORD, (item, player) -> Animations.LONGSWORD_GUARD_HIT)
                     .addGuardMotion(CorruptWeaponCategories.PHANTOM_KATANA, (item, player) -> Animations.UCHIGATANA_GUARD_HIT)
+
                     .addGuardBreakMotion(CorruptWeaponCategories.YAMATO, (item, player) -> CorruptAnimations.GUARD_BREAK1)
                     .addGuardBreakMotion(CorruptWeaponCategories.KATANA, (item, player) -> CorruptAnimations.GUARD_BREAK1)
                     .addGuardBreakMotion(CorruptWeaponCategories.GREAT_TACHI, (item, player) -> CorruptAnimations.GUARD_BREAK2).addGuardBreakMotion(CorruptWeaponCategories.S_SWORD, (item, player) -> CorruptAnimations.GUARD_BREAK1)
                     .addGuardBreakMotion(CorruptWeaponCategories.S_SPEAR, (item, player) -> CorruptAnimations.GUARD_BREAK2).addGuardBreakMotion(CorruptWeaponCategories.S_TACHI, (item, player) -> CorruptAnimations.GUARD_BREAK2)
                     .addGuardBreakMotion(CorruptWeaponCategories.S_GREATSWORD, (item, player) -> CorruptAnimations.GUARD_BREAK2).addGuardBreakMotion(CorruptWeaponCategories.S_LONGSWORD, (item, player) -> CorruptAnimations.GUARD_BREAK2)
-                    .addGuardMotion(CorruptWeaponCategories.PHANTOM_KATANA, (item, player) -> CorruptAnimations.GUARD_BREAK1)
+                    .addGuardBreakMotion(CorruptWeaponCategories.PHANTOM_KATANA, (item, player) -> CorruptAnimations.GUARD_BREAK1)
 
 
 
@@ -65,7 +66,10 @@ public class EfnXOtherModsParryCompat implements ICompatModule{
                     .addAdvancedGuardMotion(CorruptWeaponCategories.S_TACHI,((capabilityItem, pp) ->
                             List.of(EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT1, EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT2,EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT3)))
                     .addAdvancedGuardMotion(CorruptWeaponCategories.GREAT_TACHI,((capabilityItem, pp) ->
-                            List.of(EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT1, EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT2,CorruptAnimations.PARRY_BREAK5)));
+                            List.of(EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT1, EFNSkillAnimations.EFN_GUARD_ACTIVE_HIT2,CorruptAnimations.PARRY_BREAK5)))
+
+                    .addAdvancedGuardMotion(CorruptWeaponCategories.YAMATO,((capabilityItem, pp) ->
+                    List.of(CorruptAnimations.YAMATO_ACTIVE_GUARD_HIT, CorruptAnimations.YAMATO_ACTIVE_GUARD_HIT2)));
 
         }
         System.out.println("EF:N PARRY Skill compat has been implemented");
